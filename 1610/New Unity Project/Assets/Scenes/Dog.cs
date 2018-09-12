@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dog : Animal {
+public class Dog : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
