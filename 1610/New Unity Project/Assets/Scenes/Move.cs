@@ -16,8 +16,9 @@ public class Move : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         MoveSpeed.x = Speed*Input.GetAxis("Horizontal");
+        MoveSpeed.z = Speed * Input.GetAxis("Vertical");
         MoveSpeed *= Time.deltaTime;
-
+       
         Character.Move(MoveSpeed);
 	}
 }
