@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62be2756291a24a47a5e513b9cca23db, type: 3}
-  m_Name: Coin5
+  m_Script: {fileID: 11500000, guid: c47cc8fa1abfc3541a90f8876ab8c419, type: 3}
+  m_Name: PowerUp
   m_EditorClassIdentifier: 
-  Value: 10
+  Data: {fileID: 11400000, guid: 79ee6ca92b2021240968efd57f07dce3, type: 2}
