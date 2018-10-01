@@ -16,14 +16,6 @@ public class AddValue : ScriptableObject {
     {
         ValueObj.Value += data.Value;
 
-        if(ValueObj.Value <= MinValue.Value)
-        {
-            EventMin.Invoke();
-        }
-        if(ValueObj.Value >= MaxValue.Value)
-        {
-            EventMax.Invoke();
-        }
     }
 
 }

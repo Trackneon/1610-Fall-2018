@@ -7,12 +7,12 @@ public class TriggerEventBehaviour : MonoBehaviour {
     public UnityEvent Enable;
     public UnityEvent Trigger;
 
-    void OnEnable ()
+    void OnEnable()
     {
         Enable.Invoke();
     }
 
-    void OnTriggerEnter ()
+    void OnTriggerEnter()
     {
         Enable.Invoke();
     }
