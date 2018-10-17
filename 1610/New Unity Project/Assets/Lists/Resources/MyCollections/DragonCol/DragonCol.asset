@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a9110fe20bad74784f85881a3e6bfd, type: 3}
+  m_Name: DragonCol
+  m_EditorClassIdentifier: 
+  ObjectList:
+  - {fileID: 11400000, guid: ede2f9044197e0146bffe5b2d6a6d2bd, type: 2}
+  - {fileID: 11400000, guid: 8a8ff98b56378934d84dd8941d67c8f7, type: 2}
+  - {fileID: 11400000, guid: 6e1da10fb4b35c54da36b82d2fa8dfb5, type: 2}
+  - {fileID: 11400000, guid: d27dae36192e1074d8a2ca215fd9aa5b, type: 2}
+  - {fileID: 11400000, guid: e6737f6e55a31c7458db721dbf604fac, type: 2}
+  - {fileID: 11400000, guid: 6f32fd7a6268767449decb616c022d74, type: 2}
+  - {fileID: 11400000, guid: 9a7430ec29be2104e9b05957067dd607, type: 2}
+  - {fileID: 11400000, guid: cdb4e2614a61fe84ea40cd0484acdbdd, type: 2}
+  - {fileID: 11400000, guid: 55c0769eb21438e4cb5b007a80535e88, type: 2}
+  - {fileID: 11400000, guid: 1dc20fddc4f8a2e4e941d5ecd7b501a1, type: 2}
+  - {fileID: 11400000, guid: d2485f55bf677c04a897f4a3d04b29b0, type: 2}
