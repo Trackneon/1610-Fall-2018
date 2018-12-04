@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyAI : MonoBehaviour {
 
@@ -29,11 +30,6 @@ public class EnemyAI : MonoBehaviour {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 break;
         }
-            
-        if (isFollowing)
-        {
-            
-        }
 
 
 	}
@@ -52,6 +48,16 @@ public class EnemyAI : MonoBehaviour {
         if(other.gameObject == player)
         {
             State = state.idle;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        var hit = collision.gameObject;
+        var health = hit.GetComponent<HealthScript>();
+        if (health  != null)
+        {
+            health.LoseHealth(8);
         }
     }
 }
