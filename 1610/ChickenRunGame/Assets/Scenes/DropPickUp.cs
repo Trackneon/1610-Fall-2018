@@ -14,19 +14,11 @@ public class DropPickUp : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (playerHealth.currentHealth < playerHealth.max)
+       //if (playerHealth.currentHealth < playerHealth.)
         {
-            Destroy(gameObject);
-
-            playerHealth.currentHealth += 40;
+        //   playerHealth += ;
         }
 
-    }
-
-    void Update()
-    {
-        HealthScript;
-        HealthBar.sizeDelta = new Vector2(currentHealth, HealthBar.sizeDelta.y);
     }
 
 

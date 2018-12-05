@@ -1,24 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour {
 
-    public float max = 80;
-    public const int maxHealth = 80;
-    public int currentHealth = maxHealth;
-    public RectTransform HealthBar;  
+    public FloatData currentHealth;
+    //public RectTransform HealthBar;
+    public Image image;
 
-    public void LoseHealth(int amount)
+    void Start()
     {
-        currentHealth -= amount;
-        if (currentHealth <= 0)
+        image = GetComponent<Image>();
+    }
+
+    void Update()
+    {
+        //HealthBar.sizeDelta = new Vector2(currentHealth, HealthBar.sizeDelta.y);
+        image.fillAmount = currentHealth.Value;
+    }
+
+    public void LoseHealth(FloatData data)
+    {
+        currentHealth.Value -= data.Value;
+        if (currentHealth.Value <= 0)
         {
-            currentHealth = 0;
+            currentHealth.Value = 0;
             Debug.Log("Game Over!");
         }
 
-        HealthBar.sizeDelta = new Vector2(currentHealth, HealthBar.sizeDelta.y);
     }
+
+
 
 }

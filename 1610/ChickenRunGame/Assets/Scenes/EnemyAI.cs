@@ -9,10 +9,11 @@ public class EnemyAI : MonoBehaviour {
     public float speed;
     private Transform target;
     public bool isFollowing;
-    public enum state
+    public enum State
     {idle, isFollowing }
-    public state State;
+    public State state;
     public GameObject player;
+    public FloatData data;
 
 
 	// Use this for initialization
@@ -23,10 +24,10 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        switch (State) {
-            case state.idle:
+        switch (state) {
+            case State.idle:
                 break;
-            case state.isFollowing:
+            case State.isFollowing:
                 transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
                 break;
         }
@@ -39,7 +40,7 @@ public class EnemyAI : MonoBehaviour {
         if(other.gameObject == player)
         {
             //isFollowing = true;
-            State = state.isFollowing;
+            state = State.isFollowing;
         }
     }
 
@@ -47,7 +48,7 @@ public class EnemyAI : MonoBehaviour {
     {
         if(other.gameObject == player)
         {
-            State = state.idle;
+            state = State.idle;
         }
     }
 
@@ -57,7 +58,7 @@ public class EnemyAI : MonoBehaviour {
         var health = hit.GetComponent<HealthScript>();
         if (health  != null)
         {
-            health.LoseHealth(8);
+            health.LoseHealth(data);
         }
     }
 }
