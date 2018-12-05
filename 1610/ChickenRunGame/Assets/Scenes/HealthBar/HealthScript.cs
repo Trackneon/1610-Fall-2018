@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class HealthScript : MonoBehaviour {
 
     void Start()
     {
+        currentHealth.Value = 1;
         image = GetComponent<Image>();
     }
 
@@ -26,7 +28,7 @@ public class HealthScript : MonoBehaviour {
         if (currentHealth.Value <= 0)
         {
             currentHealth.Value = 0;
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene("Scene3");
         }
 
     }

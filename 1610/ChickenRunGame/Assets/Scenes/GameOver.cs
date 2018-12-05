@@ -8,12 +8,17 @@ public class GameOver : MonoBehaviour {
 
     public GameObject player;
 
-	// Use this for initialization
-	IEnumerator OnCollisionEnter (Collision other) {
-
+    // Use this for initialization
+    private IEnumerator OnTriggerEnter (Collider other)
+    {
         if(other.gameObject == player)
-        yield return new WaitForSeconds(0);
-        SceneManager.LoadScene("Scene1");
+        {
+           
+            yield return new WaitForSeconds(0);
+            //SceneManager.s("Scene1");
+            SceneManager.LoadScene("Scene2");
+        }
+
 	}
 	
 	// Update is called once per frame
