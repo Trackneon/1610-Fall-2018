@@ -20,6 +20,11 @@ public class HealthScript : MonoBehaviour {
     {
         //HealthBar.sizeDelta = new Vector2(currentHealth, HealthBar.sizeDelta.y);
         image.fillAmount = currentHealth.Value;
+
+        if (currentHealth.Value >= 1)
+        {
+            currentHealth.Value = 1;
+        }
     }
 
     public void LoseHealth(FloatData data)
